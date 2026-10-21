@@ -2,5 +2,7 @@ from agent import TinyAgent
 
 from llm import LLM
 llm = LLM()
-response = llm.generate([{"role": "user", "content": "Hi! How's life?"}])
+agent = TinyAgent(llm)
+response = agent.run("Hi! How's life?")
 print(response)
+print(agent.trajectory.runs)
