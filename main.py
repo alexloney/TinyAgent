@@ -1,5 +1,6 @@
 from agent import TinyAgent
 
-agent = TinyAgent()
-result = agent.run("What is 2 + 2?")
-print(result)
+from llm import LLM
+llm = LLM()
+response = llm.generate([{"role": "user", "content": "Hi! How's life?"}])
+print(response)
